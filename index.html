@@ -5,10 +5,40 @@
     <link href="style.css" rel="stylesheet" type="text/css"></link>
   </head>
   <body>
-    
+
+
     <div class="header">
       <h2>Notes</h2>
     </div>
+    <div class="row">
+
+  <div class="leftcolumn">
+    <div class="card">
+      <h2></h2>
+      <h5>2021-04-08</h5>
+      <p>
+	Went through the first lecture. Bitcoin uses Unspent Transaction Output (UTxO) model. Address can use UTxO's when transferring money. The entire UTxO has to be spent. If it is smaller, then the address sends the remaining money back to itself. Cardano uses extended UTxO where addresses can contain scripts instead. Ethereum's model is simpler for humans to understand because it tells directly how much someone has money and arbitrary amount can be spent. UTxO is better for concurrent/distributed systems. Lars also went through how Ethereum's account model and smart contracts can see entire state of the blockchain which can have side effects.
+
+	Lars showed the Plutus playground and did an auction demo. Playground worked well with the demo. I know the basics of Haskell, but the Plutus script looked slightly complicated. Homework was just to install playground and play with the script.
+      </p>
+    </div>
+
+    <div class="row">
+
+
+      
+  <div class="leftcolumn">
+    <div class="card">
+      <h2></h2>
+      <h5>2021-04-07</h5>
+      <p>Setting up local version of Plutus playground. Lars mentioned via Discord that the playground available online is too old for the course.
+      </p>
+      
+      <p>
+	Cloned the repo (https://github.com/input-output-hk/plutus/), installed ($ stack build plutus-playground-server) and started plutus-playground-server (nix-shell; plutus-playground-server) and then started plutus-playground-frontend (npm run start; npm rebuild node-sass).
+      </p>
+    </div>
+
     <div class="row">
       
   <div class="leftcolumn">
