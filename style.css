@@ -11,7 +11,8 @@ body {
 }
 
 .leftcolumn {
-  float: left;
+  max-width: 2000px;
+  /*float: left;*/
 }
 
 .card {
