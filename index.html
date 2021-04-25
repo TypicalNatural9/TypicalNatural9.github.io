@@ -10,56 +10,123 @@
     <div class="header">
       <h2>Notes</h2>
     </div>
-    <div class="row">
 
-  <div class="leftcolumn">
-    <div class="card">
-      <h2></h2>
-      <h5>2021-04-08</h5>
-      <p>
-	Went through the first lecture.
-      </p>
+        <div class="row">
+      <div class="leftcolumn">
+	<div class="card">
+	  <h2></h2>
+	  <h5>2021-04-20</h5>
+	  <p>
+	    Context is now ScriptContext.
+	  </p>
 
-      <p>
-	Bitcoin uses Unspent Transaction Output (UTxO) model. Address can use UTxO's when transferring money. The entire UTxO has to be spent. If it is smaller, then the address sends the remaining money back to itself.
+	  <p>
+	    Time handling: SlotRange interval, from/to to define if certain slot has been reached.
+	  </p>
 
-      </p>
-      
-      <p>Cardano uses extended UTxO where addresses can contain scripts instead. Ethereum's model is simpler for humans to understand because it tells directly how much someone has money and arbitrary amount can be spent. UTxO is better for concurrent/distributed systems. Lars also went through how Ethereum's account model and smart contracts can see entire state of the blockchain which can have side effects.
-      </p>
-      
-      <p>
-	Lars showed the Plutus playground and did an auction demo. Playground worked well with the demo. I know the basics of Haskell, but the Plutus script looked slightly complicated. Homework was just to install playground and play with the script.
-      </p>
+	  <p>
+	    Parametrized contracts.
+	  </p>
+
+	  <p>
+	    Vesting example (Homework 1 for instance) clarifies the extended UTxO model quite a bit in terms of datum and context. My mental model of the extended UTxO is as follows: Datum specifies the UTxO stuff which the validation function takes into consideration. Wallet 1 gives an UTxO which can be executed if deadline has / has not been reached by Wallet 2 / Wallet 1. Wallet 2 and 1 addresses and the deadline are defined in the datum. Context supplies the smart contract the wallet information. 
+	  </p>
+
+	  <p>
+	    Really happy about taking the course and the current path of the project. There is a terrifying sense of deterministic certainty involving the future of Cardano. Cardano platform not only makes the economic rules fair, but reduces friction in the economic system. Most honest cryptocurrency projects can tackle the first part but the second part is a lot harder to do. As a consequence, these "Store of Value" cryptocurrencies are only successful because of the general distrust of the central bank systems. Ethereum was/is cool in a meme sort of way, but it's really difficult to see a future where it is used to solve real world problems.
+	  </p>
+	</div>
+      </div>
     </div>
 
-    <div class="row">
-
-
-      
-  <div class="leftcolumn">
-    <div class="card">
-      <h2></h2>
-      <h5>2021-04-07</h5>
-      <p>Setting up local version of Plutus playground. Lars mentioned via Discord that the playground available online is too old for the course.
-      </p>
-      
-      <p>
-	Cloned the repo (https://github.com/input-output-hk/plutus/), installed ($ stack build plutus-playground-server) and started plutus-playground-server (nix-shell; plutus-playground-server) and then started plutus-playground-frontend (npm run start; npm rebuild node-sass).
-      </p>
-    </div>
 
     <div class="row">
-      
-  <div class="leftcolumn">
-    <div class="card">
-      <h2></h2>
-      <h5>2021-04-06</h5>
-      <p>Received an introduction to "Plutus Pioneer Program". Goal is to learn more about Cardano and its smart contracts, and take study notes.
+      <div class="leftcolumn">
+	<div class="card">
+	  <h2></h2>
+	  <h5>2021-04-15</h5>
+	  <p>
+	    Contents of the second lecture: 1) Triggering change on a smart contract, 2) Low-level and 3) High-level untyped on-chain validation scripts.
+	  </p>
 
-	Background: taken undergraduate level Scala courses and started studying Haskell at the end of last year.
-      </p>
+
+	  <p>
+	    Change in the blockchain does not happen automatically. Script execution requires a transaction.
+	  </p>
+
+	  <p>
+	    Ex. 1: script validator executes always (wallet can take money out of the contract). Ex. 2: script validator never executes. User defined types instead of 'data'  and unstableMakeIsData tricks.
+	  </p>
+
+	  <p>
+	    Redeemer: Transition signal/user input.
+	    <br>
+	    Datum: State of the machine.
+	    <br>
+	    Context: In Cardano it's the transaction.
+	  </p>
+	  <p>
+	  </p>
+	  
+	  
+	</div>
+      </div>
     </div>
+
+
+    
+    
+    <div class="row">
+      <div class="leftcolumn">
+	<div class="card">
+	  <h2></h2>
+	  <h5>2021-04-08</h5>
+	  <p>
+	    Went through the first lecture.
+	  </p>
+	  
+	  <p>
+	    Bitcoin uses Unspent Transaction Output (UTxO) model. Address can use UTxO's when transferring money. The entire UTxO has to be spent. If it is smaller, then the address sends the remaining money back to itself.
+
+	  </p>
+	  
+	  <p>Cardano uses extended UTxO where addresses can contain scripts instead. Ethereum's model is simpler for humans to understand because it tells directly how much someone has money and arbitrary amount can be spent. UTxO is better for concurrent/distributed systems. Lars also went through how Ethereum's account model and smart contracts can see entire state of the blockchain which can have side effects.
+	  </p>
+	  
+	  <p>
+	    Lars showed the Plutus playground and did an auction demo. Playground worked well with the demo. I know the basics of Haskell, but the Plutus script looked slightly complicated. Homework was just to install playground and play with the script.
+	  </p>
+	</div>
+      </div>
+    </div>
+      
+      
+      <div class="row">
+	<div class="leftcolumn">
+	  <div class="card">
+	    <h2></h2>
+	    <h5>2021-04-07</h5>
+	    <p>Setting up local version of Plutus playground. Lars mentioned via Discord that the playground available online is too old for the course.
+	    </p>
+	    
+	    <p>
+	      Cloned the repo (https://github.com/input-output-hk/plutus/), installed ($ stack build plutus-playground-server) and started plutus-playground-server (nix-shell; plutus-playground-server) and then started plutus-playground-frontend (npm run start; npm rebuild node-sass).
+	    </p>
+	  </div>
+	</div>
+	
+	<div class="row">
+	  <div class="leftcolumn">
+	    <div class="card">
+	      <h2></h2>
+	      <h5>2021-04-06</h5>
+	      <p>Received an introduction to "Plutus Pioneer Program". Goal is to learn more about Cardano and its smart contracts, and take study notes.
+		
+		Background: taken undergraduate level Scala courses and started studying Haskell at the end of last year.
+	      </p>
+	    </div>
+	  </div>
+	</div>
   </body>
 </html>
 
