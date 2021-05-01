@@ -11,7 +11,27 @@
       <h2>Notes</h2>
     </div>
 
-        <div class="row">
+    <div class="row">
+      <div class="leftcolumn">
+	<div class="card">
+	  <h2></h2>
+	  <h5>2021-05-01</h5>
+	  
+	  <p>
+	    Intro to monads. Running the contract via terminal instead of playground. Homework was easy to understand, but had to search for an example on how to extract the PubKeyHash of the recipient wallet. The lecture video was a bit too long, 1 hour is optimal. However, the next lecture will be on Thursday instead of Tuesday so there's no time pressure.
+	  </p>
+
+	  <p>
+	    It's not clear how the plutus dependencies should be build without using nix... Had to launch nix-shell from plutus repository and then use cabal repl to load the homework, :l Week04.Homework. Usage of playground was clearer. I should try installing plutus without nix... It's annoying how much nix is taking space, even though it can be cleaned and it seems to install every necessary package. Need new disk?
+	  </p>
+	</div>
+      </div>
+    </div>
+
+    
+    
+    
+    <div class="row">
       <div class="leftcolumn">
 	<div class="card">
 	  <h2></h2>
@@ -99,34 +119,34 @@
 	</div>
       </div>
     </div>
-      
+    
+    
+    <div class="row">
+      <div class="leftcolumn">
+	<div class="card">
+	  <h2></h2>
+	  <h5>2021-04-07</h5>
+	  <p>Setting up local version of Plutus playground. Lars mentioned via Discord that the playground available online is too old for the course.
+	  </p>
+	  
+	  <p>
+	    Cloned the repo (https://github.com/input-output-hk/plutus/), installed ($ stack build plutus-playground-server) and started plutus-playground-server (nix-shell; plutus-playground-server) and then started plutus-playground-frontend (npm run start; npm rebuild node-sass).
+	  </p>
+	</div>
+      </div>
       
       <div class="row">
 	<div class="leftcolumn">
 	  <div class="card">
 	    <h2></h2>
-	    <h5>2021-04-07</h5>
-	    <p>Setting up local version of Plutus playground. Lars mentioned via Discord that the playground available online is too old for the course.
-	    </p>
-	    
-	    <p>
-	      Cloned the repo (https://github.com/input-output-hk/plutus/), installed ($ stack build plutus-playground-server) and started plutus-playground-server (nix-shell; plutus-playground-server) and then started plutus-playground-frontend (npm run start; npm rebuild node-sass).
+	    <h5>2021-04-06</h5>
+	    <p>Received an introduction to "Plutus Pioneer Program". Goal is to learn more about Cardano and its smart contracts, and take study notes.
+	      
+	      Background: taken undergraduate level Scala courses and started studying Haskell at the end of last year.
 	    </p>
 	  </div>
 	</div>
-	
-	<div class="row">
-	  <div class="leftcolumn">
-	    <div class="card">
-	      <h2></h2>
-	      <h5>2021-04-06</h5>
-	      <p>Received an introduction to "Plutus Pioneer Program". Goal is to learn more about Cardano and its smart contracts, and take study notes.
-		
-		Background: taken undergraduate level Scala courses and started studying Haskell at the end of last year.
-	      </p>
-	    </div>
-	  </div>
-	</div>
+      </div>
   </body>
 </html>
 
